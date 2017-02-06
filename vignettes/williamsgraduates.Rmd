@@ -1,0 +1,70 @@
+---
+title: "Williams Finance"
+author: "Yuxin Wu '19"
+date: "2017-2-5"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Williams Graduates}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+  The Williams Graduates package loads data on the graduating class of Williams College from 20000 to 2015 from natively stored text files. It also displays statistics and graphics regarding different aspects of the graduating class.
+
+## readgraduates
+
+The function `readgraduates(year)` scans for the names of graduating seniors of `year` and returns a list of names.
+
+Note that for `readgraduates(year)`, year can only be between 2000-2015
+
+## longestname
+
+`longestname(year)` shows the name of graduating senior of `year` with the longest first name.
+
+`> longestname(2015)`
+
+```{r, echo=FALSE, fig.height=5, fig.width=8}
+
+williamsgraduates::longestname(2000)
+```
+
+## showstats
+
+`showstats` uses the data from the read function and performs appropriate analysis and generates graphics associated with the data.`type` categorizes the kind of analysis to be done.
+
+The possible options are `graduates`, `SCL`, `MCL`, `CL` and `summary`. `graduates`, `SCL`, `MCL` and `CL` displays graph of the total number of graduating seniors, those with Cum Laude or higher, those with Magna Cum Laude or hight and those with Summa Cum Laude respectively over the years. `summary` shows a graph summarizing the graduating seniors over the years.
+
+`> showstats("graduates")`
+
+```{r, echo=FALSE, fig.height=5, fig.width=8}
+
+williamsgraduates::showstats("graduates")
+```
+
+`> showstats("SCL")`
+
+```{r, echo=FALSE, fig.height=5, fig.width=8}
+
+williamsgraduates::showstats("SCL")
+```
+
+`> showstats("MCL")`
+
+```{r, echo=FALSE, fig.height=5, fig.width=8}
+
+williamsgraduates::showstats("MCL")
+```
+
+`> showstats("CL")`
+
+```{r, echo=FALSE, fig.height=5, fig.width=8}
+
+williamsgraduates::showstats("CL")
+```
+
+`> showstats("summary")`
+
+```{r, echo=FALSE, fig.height=5, fig.width=8}
+
+williamsgraduates::showstats("summary")
+```

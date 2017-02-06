@@ -1,0 +1,19 @@
+Package: williamsgraduates
+Type: Package
+Title: Find facts about the graduating class of Williams College
+Version: 0.1.0
+Author: Yuxin Wu [aut,cre]
+Maintainer: yuxin Wu <yw2@williams.edu>
+Description: This package loads data on the graduating class of Williams
+    College from 20000 to 2015 from natively stored text files. It also 
+    displays statistics and graphics regarding different aspects of the
+    graduating class.
+License: GPL-2
+LazyData: TRUE
+Imports: stringr,
+         ggplot2,
+RoxygenNote: 5.0.1
+Suggests: testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
